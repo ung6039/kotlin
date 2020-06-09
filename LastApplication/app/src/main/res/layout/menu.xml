@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <item android:id="@+id/home_menu"
+        android:title="HOME"/>
+    <item android:id="@+id/home_pop"
+        android:title="POP_RESTAURANT"/>
+    <item android:id="@+id/home_recommand"
+        android:title="RECOMMAND"/>
+    <item android:id="@+id/home_recipe"
+        android:title="RECIPE"/>
+    <item android:id="@+id/home_news"
+        android:title="NEWS"/>
+
+</menu>
