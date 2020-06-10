@@ -9,13 +9,23 @@ import android.view.MenuItem
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.TextView
-import android.widget.Toast
 import org.json.JSONObject
 import java.net.URL
 
-class HomeActivity : AppCompatActivity() {
-    var dataList = ArrayList<HashMap<String, String>>()
+class CateFoodActivity : AppCompatActivity() {
+    var dataList = ArrayList<HashMap<String,String>>();
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_cate_food)
+        val title = intent.getStringExtra("title")
+        val subject = intent.getStringExtra("subject")
+        val titleTextView= findViewById<TextView>(R.id.cate_titleView)
+        titleTextView.text= title
+        val sujectTextView = findViewById<TextView>(R.id.subjectText)
+        sujectTextView.text = subject
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
@@ -45,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         override fun doInBackground(vararg params: String?): String? {
-            return URL("http://211.238.142.211:3355/store").readText(
+            return URL("http://211.238.142.211:2233/store").readText(
                 Charsets.UTF_8
             )
         }
@@ -66,9 +76,9 @@ class HomeActivity : AppCompatActivity() {
 
                 dataList.add(map)
             }
-            val homeListView =findViewById<ListView>(R.id.HomeListView)
-            homeListView.adapter =
-                HomeAdapter(this@HomeActivity, dataList)
+            val CateListView =findViewById<ListView>(R.id.cateListView)
+            CateListView.adapter =
+                HomeAdapter(this@CateFoodActivity, dataList)
         }
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -79,27 +89,27 @@ class HomeActivity : AppCompatActivity() {
         when(item?.itemId){
             R.id.home_menu->{
                 // 화면 이동 -> Home으로 이동해라
-                var intent=Intent(this,HomeActivity::class.java)
+                var intent= Intent(this,HomeActivity::class.java)
                 startActivity(intent)
                 return true;
             }
             R.id.home_pop->{
-                var intent=Intent(this,PopActivity::class.java)
+                var intent= Intent(this,PopActivity::class.java)
                 startActivity(intent)
                 return true;
             }
             R.id.home_recommand->{
-                var intent=Intent(this,RecommandActivity::class.java)
+                var intent= Intent(this,RecommandActivity::class.java)
                 startActivity(intent)
                 return true;
             }
             R.id.home_recipe->{
-                var intent=Intent(this,RecipeActivity::class.java)
+                var intent= Intent(this,RecipeActivity::class.java)
                 startActivity(intent)
                 return true;
             }
             R.id.home_news->{
-                var intent=Intent(this,NewsActivity::class.java)
+                var intent= Intent(this,NewsActivity::class.java)
                 startActivity(intent)
                 return true;
             }

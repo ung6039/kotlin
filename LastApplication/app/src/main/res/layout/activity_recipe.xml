@@ -7,17 +7,56 @@
     tools:context=".RecipeActivity">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="350dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginRight="7dp"
-        android:text="Recipe"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:id="@+id/Recipe_Text"
+        android:layout_width="194dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginRight="183dp"
+        android:text="SIST RECIPE"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#933A3A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/RecipeListView"
+        android:layout_width="409dp"
+        android:layout_height="665dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Recipe_Text" />
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="1dp"
+        android:text="NEXT"
+        app:layout_constraintBottom_toTopOf="@+id/RecipeListView"
+        app:layout_constraintEnd_toEndOf="@+id/RecipeListView" />
+
+    <Button
+        android:id="@+id/prevBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Prev"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Recipe_Text"
+        app:layout_constraintStart_toStartOf="@+id/RecipeListView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="MAIN" android:id="@+id/main_menu"/>
+    <item android:title="HOME" android:id="@+id/home_menu"/>
+    <item android:title="POP_RESTAURANT" android:id="@+id/home_pop"/>
+    <item android:title="RECOMMAND" android:id="@+id/home_recommand"/>
+    <item android:title="RECIPE" android:id="@+id/home_recipe"/>
+    <item android:title="NEWS" android:id="@+id/home_news"/>
+</menu>

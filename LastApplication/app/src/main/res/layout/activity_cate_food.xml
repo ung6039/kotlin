@@ -4,35 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FAF4F4"
-    tools:context=".HomeActivity">
+    tools:context=".CateFoodActivity">
 
     <TextView
-        android:id="@+id/HomeTextView"
+        android:id="@+id/cate_titleView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:text="믿고 보는 맛집"
+        android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#DD1C1C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/HomeListView"
-        android:layout_width="397dp"
-        android:layout_height="651dp"
+    <TextView
+        android:id="@+id/Cate_subjectView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HomeTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/cate_titleView" />
+
+    <ListView
+        android:id="@+id/cateListView"
+        android:layout_width="0dp"
+        android:layout_height="633dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cate_subjectView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
